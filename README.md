@@ -195,7 +195,7 @@ Click "File Save"
 ***step 4***
 * Check the status of your masternode within the VPS by using the command below:
 
-`btci-cli masternodestatus`
+`btci-cli getmasternodestatus`
 
 *You should see ***status 4***
 
