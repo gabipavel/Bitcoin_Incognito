@@ -1,6 +1,6 @@
 ![Example-Logo](https://i.imgur.com/Bnq2i84.png)
 # Bitcoin Incognito Masternode Setup Guide (Ubuntu 14.04)
-This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
+This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 14.04. (Use at your own risk)
 
 If you require further assistance contact the support team @ [Discord](https://discord.gg/zQwE4tr)
 ***
