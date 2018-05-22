@@ -33,7 +33,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 ***Step 4***
-* Choose a server type: Ubuntu 16.04
+* Choose a server type: Ubuntu 14.04
 ![Example-OS](https://i.imgur.com/6mSPmVc.png)
 ***
 
@@ -206,7 +206,6 @@ If you do, congratulations! You have now setup a masternode. If you do not, plea
 
 Any donation is highly appreciated.  
 
-**BCH**: qzgnck23pwfag8ucz2f0vf0j5skshtuql5hmwwjhds  
-**ETH**: 0x765eA1753A1eB7b12500499405e811f4d5164554  
-**LTC**: LNt9EQputZK8djTSZyR3jE72o7NXNrb4aB  
+**BTCi**: BPfu4MJ84oK5jutAWTx796TEJYzGiyrHCm  
+ 
 
