@@ -331,6 +331,7 @@ function setup_node() {
 ##### Main #####
 clear
 
+purgeOldInstallation
 checks
 prepare_system
 compile_node
