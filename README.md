@@ -1,12 +1,12 @@
 ![Example-Logo](https://i.imgur.com/Bnq2i84.png)
-# Bitcoin Incognito Masternode Setup Guide (Ubuntu 14.04)
-This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 14.04. (Use at your own risk)
+# Bitcoin Incognito Masternode Setup Guide (Ubuntu 16.04)
+This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
 If you require further assistance contact the support team @ [Discord](https://discord.gg/GQ2rx23)
 ***
 ## Requirements
 1) **1,500 BTCi coins.**
-2) **A Vultr VPS running Linux Ubuntu 14.04.**
+2) **A Vultr VPS running Linux Ubuntu 16.04.**
 3) **A Windows local wallet.**
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
 ***
@@ -105,13 +105,13 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
 
-`wget -q https://raw.githubusercontent.com/Realbityoda/Bitcoin_Incognito/master/btci_install.sh`
+`wget -q https://raw.githubusercontent.com/Realbityoda/Bitcoin_Incognito/master/xbi_install.sh`
 ***
 
 ***Step 8***
 * Paste the code below into the Bitvise terminal then press enter
 
-`bash btci_install.sh`
+`bash xbi_install.sh`
 
 ![Example-Bash](https://i.imgur.com/myvmKTE.png)
 
@@ -140,7 +140,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ***
 
 ***Step 2***
-* Send EXACLY 1,500 BTCi to a receive address within your wallet.
+* Send EXACLY 1,500 XBI to a receive address within your wallet.
 ***
 
 ***Step 3***
@@ -195,17 +195,11 @@ Click "File Save"
 ***step 4***
 * Check the status of your masternode within the VPS by using the command below:
 
-`btci-cli getmasternodestatus`
+`XBI-cli getmasternodestatus`
 
 *You should see ***status 4***
 
 If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.  
 ***
-
-## Donations:  
-
-Any donation is highly appreciated.  
-
-**BTCi**: BPfu4MJ84oK5jutAWTx796TEJYzGiyrHCm  
  
 
