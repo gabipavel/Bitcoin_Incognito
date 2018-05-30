@@ -2,7 +2,7 @@
 
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='xbi.conf'
-CONFIGFOLDER='/root/.xbi'
+CONFIGFOLDER='/root/.XBI'
 COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
