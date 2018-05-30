@@ -1,12 +1,12 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='btci.conf'
-CONFIGFOLDER='/root/.BTCi'
-COIN_DAEMON='/usr/local/bin/btcid'
-COIN_CLI='/usr/local/bin/btci-cli'
-COIN_REPO='https://github.com/Realbityoda/Bitcoin_Incognito/releases/download/v1.0.0.0/btci.tar.gz'
-COIN_NAME='BTCi'
+CONFIG_FILE='xbi.conf'
+CONFIGFOLDER='/root/.xbi'
+COIN_DAEMON='/usr/local/bin/xbid'
+COIN_CLI='/usr/local/bin/xbi-cli'
+COIN_REPO='https://github.com/BTCIncognito/bitcoinincognito/files/2047752/xbid.zip'
+COIN_NAME='XBI'
 COIN_PORT=7250
 RPC_PORT=7249
 
@@ -25,30 +25,27 @@ MAG='\e[1;35m'
 purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME files and configurations${NC}"
     #kill wallet daemon
-    sudo killall btcid > /dev/null 2>&1
+    sudo killall xbid > /dev/null 2>&1
     #remove old ufw port allow
     sudo ufw delete allow 7250/tcp > /dev/null 2>&1
     #remove old files
-    if [ -d "~/.BTCi" ]; then
-        sudo rm -rf ~/.BTCi > /dev/null 2>&1
+    if [ -d "~/.xbid" ]; then
+        sudo rm -rf ~/.xbid > /dev/null 2>&1
     fi
-    #remove binaries and BTCi utilities
+    #remove binaries and XBI utilities
     cd /usr/local/bin && sudo rm btci-cli btcid-tx btcid > /dev/null 2>&1 && cd
     echo -e "${GREEN}* Done${NONE}";
 }
 
 function compile_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
-  cd $TMP_FOLDER
-  wget -q $COIN_REPO
+  cd $TMP_FOLDER >/dev/null 2>&1
+  wget -q $COIN_TGZ
   compile_error
-  COIN_ZIP=$(echo $COIN_REPO | awk -F'/' '{print $NF}')
-  tar xvzf $COIN_ZIP >/dev/null 2>&1
-  compile_error
-  cp btci* /usr/local/bin
-  compile_error
-  strip $COIN_DAEMON $COIN_CLI
-  cd -
+  unzip $COIN_ZIP >/dev/null 2>&1
+  chmod +x $COIN_DAEMON $COIN_CLI
+  cp $COIN_DAEMON $COIN_CLI $COIN_PATH
+  cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
 }
