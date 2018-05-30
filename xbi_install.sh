@@ -3,8 +3,8 @@
 TMP_FOLDER=$(mktemp -d)
 CONFIG_FILE='xbi.conf'
 CONFIGFOLDER='/root/.xbi'
-COIN_DAEMON='/usr/local/bin/xbid'
-COIN_CLI='/usr/local/bin/xbi-cli'
+COIN_DAEMON='xbid'
+COIN_CLI='xbi-cli'
 COIN_REPO='https://github.com/BTCIncognito/bitcoinincognito.git'
 COIN_TGZ='https://github.com/BTCIncognito/bitcoinincognito/files/2047752/xbid.zip'
 COIN_NAME='XBI'
