@@ -1,11 +1,11 @@
 ![Example-Logo](https://i.imgur.com/Bnq2i84.png)
-# Bitcoin Incognito Masternode Setup Guide (Ubuntu 16.04)
+# XBI Masternode Setup Guide (Ubuntu 16.04)
 This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
 If you require further assistance contact the support team @ [Discord](https://discord.gg/GQ2rx23)
 ***
 ## Requirements
-1) **1,500 BTCi coins.**
+1) **1,500 XBI coins.**
 2) **A Vultr VPS running Linux Ubuntu 16.04.**
 3) **A Windows local wallet.**
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
@@ -136,7 +136,7 @@ If you require further assistance contact the support team @ [Discord](https://d
 ## Section D: Preparing the Local wallet
 
 ***Step 1***
-* Download and install the Bitcoin Incognito wallet [here](https://github.com/BTCIncognito/bitcoinincognito/releases)
+* Download and install the XBI wallet [here](https://github.com/BTCIncognito/bitcoinincognito/releases)
 ***
 
 ***Step 2***
@@ -195,7 +195,9 @@ Click "File Save"
 ***step 4***
 * Check the status of your masternode within the VPS by using the command below:
 
-`XBI-cli getmasternodestatus`
+`abi-cli getmasternodestatus`
+
+`xbi-cli getinfo`
 
 *You should see ***status 4***
 
