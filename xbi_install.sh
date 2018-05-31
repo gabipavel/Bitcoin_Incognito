@@ -250,7 +250,7 @@ function important_information() {
  echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
  echo -e "${GREEN}Start:${NC}${RED}systemctl start $COIN_NAME.service${NC}"
  echo -e "${GREEN}Stop:${NC}${RED}systemctl stop $COIN_NAME.service${NC}"
- echo -e "${GREEN}VPS_IP: PORT${NC}${GREEN}$NODEIP: $COIN_PORT${NC}"
+ echo -e "${GREEN}VPS_IP:${NC}${GREEN}$NODEIP:$COIN_PORT${NC}"
  echo -e "${GREEN}MASTERNODE GENKEY is:${NC}${PURPLE}$COINKEY${NC}"
  echo -e "${BLUE}================================================================================================================================"
  echo -e "${CYAN}Follow twitter to stay updated.  https://twitter.com/Real_Bit_Yoda${NC}"
