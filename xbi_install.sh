@@ -27,15 +27,15 @@ MAG='\e[1;35m'
 purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME files and configurations${NC}"
     #kill wallet daemon
-    sudo killall nosd > /dev/null 2>&1
+    sudo killall xbid > /dev/null 2>&1
     #remove old ufw port allow
     sudo ufw delete allow 7250/tcp > /dev/null 2>&1
     #remove old files
-    if [ -d "~/.xbi" ]; then
-        sudo rm -rf ~/.xbi > /dev/null 2>&1
+    if [ -d "~/.XBI" ]; then
+        sudo rm -rf ~/.XBI > /dev/null 2>&1
     fi
     #remove binaries and XBI utilities
-    cd /usr/local/bin && sudo rm nos-cli nos-tx nosd > /dev/null 2>&1 && cd
+    cd /usr/local/bin && sudo rm xbi-cli xbi-tx xbid > /dev/null 2>&1 && cd
     echo -e "${GREEN}* Done${NONE}";
 }
 
@@ -244,7 +244,7 @@ clear
 function important_information() {
  echo
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${PURPLE}Windows Wallet Guide. https://github.com/Realbityoda/Nos/master/README.md${NC}"
+ echo -e "${PURPLE}Windows Wallet Guide. https://github.com/Realbityoda/Bitcoin_Incognito/master/README.md${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}$COIN_NAME Masternode is up and running listening on port${NC}${PURPLE}$COIN_PORT${NC}."
  echo -e "${GREEN}Configuration file is:${NC}${RED}$CONFIGFOLDER/$CONFIG_FILE${NC}"
