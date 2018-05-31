@@ -195,7 +195,7 @@ Click "File Save"
 ***step 4***
 * Check the status of your masternode within the VPS by using the command below:
 
-`abi-cli getmasternodestatus`
+`xbi-cli getmasternodestatus`
 
 `xbi-cli getinfo`
 
