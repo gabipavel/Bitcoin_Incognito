@@ -2,7 +2,7 @@
 # Bitcoin Incognito (XBI) Masternode Setup Guide (Ubuntu 16.04)
 This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
-If you require further assistance contact the support team @ [https://discord.gg/q5Gsuxz)
+If you require further assistance contact the support team @[Discord][https://discord.gg/q5Gsuxz)
 ***
 ## Requirements
 1) **1,500 XBI coins.**
