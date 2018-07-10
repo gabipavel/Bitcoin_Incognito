@@ -10,7 +10,7 @@ COIN_REPO='https://github.com/BTCIncognito/bitcoinincognito.git'
 COIN_TGZ='https://github.com/Realbityoda/Bitcoin_Incognito/releases/download/v1.1.0.0/xbi.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='XBI'
-COIN_PORT=7250
+COIN_PORT=7331
 RPC_PORT=7249
 
 NODEIP=$(curl -s4 icanhazip.com)
