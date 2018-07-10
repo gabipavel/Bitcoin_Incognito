@@ -5,7 +5,7 @@ This guide will assist you in setting up a Bitcoin Incognito Masternode on a Lin
 If you require further assistance contact the support team [Discord](https://discord.gg/q5Gsuxz)
 ***
 ## Requirements
-1) **1,500 XBI coins.**
+1) **3,000 XBI coins.**
 2) **A Vultr VPS running Linux Ubuntu 16.04.**
 3) **A Windows local wallet.**
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
@@ -140,7 +140,7 @@ If you require further assistance contact the support team [Discord](https://dis
 ***
 
 ***Step 2***
-* Send EXACLY 1,500 XBI to a receive address within your wallet.
+* Send EXACLY 3,000 XBI to a receive address within your wallet.
 ***
 
 ***Step 3***
