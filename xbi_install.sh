@@ -27,15 +27,22 @@ MAG='\e[1;35m'
 purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME files and configurations${NC}"
     #kill wallet daemon
-    sudo killall xbid > /dev/null 2>&1
+    systemctl stop $COIN_NAME.service > /dev/null 2>&1
+    sudo killall $COIN_DAEMON > /dev/null 2>&1
+	# Save Key 
+	OLDKEY=$(awk -F'=' '/masternodeprivkey/ {print $2}' $CONFIGFOLDER/$CONFIG_FILE 2> /dev/null)
+	if [ "$?" -eq "0" ]; then
+    		echo -e "${CYAN}Saving Old Installation Genkey${NC}"
+		echo -e $OLDKEY
+	fi
     #remove old ufw port allow
-    sudo ufw delete allow 7250/tcp > /dev/null 2>&1
+    sudo ufw delete allow $COIN_PORT/tcp > /dev/null 2>&1
     #remove old files
-    if [ -d "~/.XBI" ]; then
-        sudo rm -rf ~/.XBI > /dev/null 2>&1
-    fi
-    #remove binaries and XBI utilities
-    cd /usr/local/bin && sudo rm xbi-cli xbi-tx xbid > /dev/null 2>&1 && cd
+    rm rm -- "$0" > /dev/null 2>&1
+    sudo rm -rf $CONFIGFOLDER > /dev/null 2>&1
+    sudo rm -rf /usr/local/bin/$COIN_CLI /usr/local/bin/$COIN_DAEMON> /dev/null 2>&1
+    sudo rm -rf /usr/bin/$COIN_CLI /usr/bin/$COIN_DAEMON > /dev/null 2>&1
+    sudo rm -rf /tmp/*
     echo -e "${GREEN}* Done${NONE}";
 }
 
@@ -263,7 +270,7 @@ function important_information() {
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${RED}Donations always excepted gratefully.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${YELLOW}XBI: BPfu4MJ84oK5jutAWTx796TEJYzGiyrHCm${NC}"
+ echo -e "${YELLOW}XBI: B6q3pMccExvyejrGrB5tRLK12dhmuRBTFC${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  
  }
