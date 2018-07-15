@@ -6,12 +6,12 @@ CONFIGFOLDER='/root/.XBI'
 COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_REPO='https://github.com/BTCIncognito/bitcoinincognito.git'
-COIN_TGZ='https://github.com/Realbityoda/Bitcoin_Incognito/releases/download/v4.0.0.0/xbi.zip'
+COIN_REPO='https://github.com/osoese/xbiclient'
+COIN_TGZ='https://github.com/galimba/testing/raw/master/bin.zip'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='XBI'
-COIN_PORT=7331
-RPC_PORT=7249
+COIN_PORT=7332
+RPC_PORT=6250
 
 NODEIP=$(curl -s4 icanhazip.com)
 
@@ -262,18 +262,13 @@ function important_information() {
  echo -e "${BLUE}================================================================================================================================"
  echo -e "${CYAN}Follow twitter to stay updated.  https://twitter.com/Real_Bit_Yoda${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN.${NC}"
+ echo -e "${CYAN}Ensure Node is fully SYNCED with BLOCKCHAIN before starting your Node :).${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
  echo -e "${GREEN}Usage Commands.${NC}"
  echo -e "${GREEN}xbi-cli masternode status${NC}"
  echo -e "${GREEN}xbi-cli getinfo.${NC}"
  echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${RED}Donations always excepted gratefully.${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
- echo -e "${YELLOW}XBI: B6q3pMccExvyejrGrB5tRLK12dhmuRBTFC${NC}"
- echo -e "${BLUE}================================================================================================================================${NC}"
- 
- }
+}
 
 function setup_node() {
   get_ip
