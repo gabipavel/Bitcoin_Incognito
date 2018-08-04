@@ -18,9 +18,9 @@ If you require further assistance contact the support team [Discord](https://dis
 * **Section E**: Connecting & Starting the masternode.
 ***
 
-## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7296974) 
+## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7497353) 
 ***Step 1***
-* Register at [Vultr](https://www.vultr.com/?ref=7296974)
+* Register at [Vultr](https://www.vultr.com/?ref=7497353)
 ***
 
 ***Step 2***
