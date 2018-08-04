@@ -105,7 +105,7 @@ If you require further assistance contact the support team [Discord](https://dis
 ***Step 7***
 * Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
 
-`wget -N https://github.com/sub307/Bitcoin_Incognito/blob/master/xbi_install.sh`
+`wget -N https://raw.githubusercontent.com/sub307/Bitcoin_Incognito/master/xbi_install.sh`
 ***
 
 ***Step 8***
