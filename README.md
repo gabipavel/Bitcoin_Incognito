@@ -122,7 +122,7 @@ If you require further assistance contact the support team [Discord](https://dis
 ***
 
 ***Step 10***
-* When prompted to enter your Gen key - press enter
+* When prompted to enter your Gen key - press enter (or paste your local generated key and press enter)
 
 ![Example-installing](https://i.imgur.com/sLvWd1S.png)
 ***
