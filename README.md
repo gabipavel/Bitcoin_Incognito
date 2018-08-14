@@ -136,7 +136,7 @@ If you require further assistance contact the support team [Discord](https://dis
 ## Section D: Preparing the Local wallet
 
 ***Step 1***
-* Download and install the XBI wallet [here](https://github.com/XBIncognito/Files/blob/master/xbi-4.1.0.0.zip)
+* Download and install the XBI wallet [here](https://github.com/XBIncognito/Release/blob/master/xbi-4.2.0.2.zip)
 ***
 
 ***Step 2***
@@ -177,7 +177,7 @@ If you require further assistance contact the support team [Discord](https://dis
 
 * Fill in the form. 
 * For `Alias` type something like "MN01" **don't use spaces**
-* The `Address` is the IP and port of your server (this will be in the Bitvise terminal that you still have open).
+* The `Address` is the IP and port (7332) of your server (this will be in the Bitvise terminal that you still have open).
 * The `Genkey` is your masternode Gen key (This is also in the Bitvise terminal that you have open).
 * The `TxHash` is the transaction ID/long key that you copied to the text file.
 * The `Output Index` is the 0 or 1 that you copied to your text file.
