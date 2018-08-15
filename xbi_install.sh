@@ -151,6 +151,8 @@ externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
 
 #Addnodes
+addnode=xbi.seeds.mn.zone
+addnode=xbi.mnseeds.com
 addnode=217.163.23.226
 addnode=45.32.239.86
 addnode=108.61.199.6
