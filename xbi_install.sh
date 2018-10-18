@@ -153,9 +153,8 @@ masternodeprivkey=$COINKEY
 #Addnodes
 addnode=xbi.seeds.mn.zone
 addnode=xbi.mnseeds.com
-addnode=217.163.23.226
-addnode=45.32.239.86
-addnode=108.61.199.6
+addnode=95.179.164.128
+addnode=144.202.57.32
 
 EOF
 }
