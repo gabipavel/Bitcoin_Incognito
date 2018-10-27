@@ -205,5 +205,14 @@ Click "File Save"
 
 If you do, congratulations! You have now setup a masternode. If you do not, please contact support and they will assist you.  
 ***
- 
+## FAQ
+
+If you don't see ***status 4***
+
+Check if your wallet is syncing with `xbi-cli getinfo`. 
+If your wallet is stuck, use the commands `systemctl stop XBI.service` and `xbid -reindex -daemon` to reindex.
+Wait a few minutes and check the status again with `xbi-cli getinfo`
+If your wallet is on the correct block, use `xbi-cli stop` and `systemctl start XBI.service` to restart the service.
+Wait until `xbi-cli mnsync status` returns true on everything but the "isFailed"
+Retry starting the masternode from you local wallet.
 
