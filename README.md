@@ -11,14 +11,14 @@ If you require further assistance contact the support team [Discord](https://dis
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
 ***
 ## Contents
-* **Section A**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7497353).
+* **Section A**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573).
 * **Section B**: Downloading and installing Bitvise.
 * **Section C**: Connecting to the VPS and installing the MN script via Bitvise.
 * **Section D**: Preparing the local wallet.
 * **Section E**: Connecting & Starting the masternode.
 ***
 
-## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7497353) 
+## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573) 
 ***Step 1***
 * Register at [Vultr](https://www.vultr.com/?ref=7497353)
 ***
