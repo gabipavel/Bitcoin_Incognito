@@ -140,7 +140,7 @@ If you require further assistance contact the support team [Discord](https://dis
 ***
 
 ***Step 2***
-* Send EXACLY 3,000 XBI to a receive address within your wallet.
+* Send EXACTLY 3,000 XBI to a receive address within your wallet.
 ***
 
 ***Step 3***
