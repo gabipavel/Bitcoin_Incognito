@@ -180,7 +180,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 * Fill in the form. 
 * For `Alias` type something like "MN01" **don't use spaces**
-* The `Address` is the IP and port (7332) of your server (this will be in the Bitvise terminal that you still have open).
+* The `Address` is the IP and port (7339) of your server (this will be in the Bitvise terminal that you still have open).
 * The `Genkey` is your masternode Gen key (This is also in the Bitvise terminal that you have open).
 * The `TxHash` is the transaction ID/long key that you copied to the text file.
 * The `Output Index` is the 0 or 1 that you copied to your text file.
