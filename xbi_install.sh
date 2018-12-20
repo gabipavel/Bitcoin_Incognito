@@ -6,11 +6,13 @@ CONFIGFOLDER='/root/.XBI'
 COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_REPO='https://github.com/osoese/xbiclient'
-COIN_TGZ='https://github.com/galimba/testing/raw/master/bin.zip'
+COIN_REPO="https://github.com/XBIncognito/xbi-4.3.2.1/releases/download/4.3.2.1/"
+COIN_ZIP="xbi-linux-daemon-4.3.2.1.zip"
+COIN_LINK="${COIN_REPO}${COIN_ZIP}"
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='XBI'
-COIN_PORT=7332
+COIN_PORT=7339
+OLD_PORT=7332
 RPC_PORT=6250
 
 NODEIP=$(curl -s4 icanhazip.com)
@@ -36,13 +38,13 @@ function purgeOldInstallation() {
 		echo -e $OLDKEY
 	fi
     #remove old ufw port allow
-    sudo ufw delete allow $COIN_PORT/tcp > /dev/null 2>&1
+    sudo ufw delete allow $OLD_PORT/tcp > /dev/null 2>&1
     #remove old files
     rm rm -- "$0" > /dev/null 2>&1
-    sudo rm -rf $CONFIGFOLDER > /dev/null 2>&1
-    sudo rm -rf /usr/local/bin/$COIN_CLI /usr/local/bin/$COIN_DAEMON> /dev/null 2>&1
-    sudo rm -rf /usr/bin/$COIN_CLI /usr/bin/$COIN_DAEMON > /dev/null 2>&1
-    sudo rm -rf /tmp/*
+    rm -rf $CONFIGFOLDER > /dev/null 2>&1
+    rm -rf /usr/local/bin/$COIN_CLI /usr/local/bin/$COIN_DAEMON> /dev/null 2>&1
+    rm -rf /usr/bin/$COIN_CLI /usr/bin/$COIN_DAEMON > /dev/null 2>&1
+    rm -rf /tmp/*
     echo -e "${GREEN}* Done${NONE}";
 }
 
@@ -50,7 +52,7 @@ function purgeOldInstallation() {
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
-  wget -q $COIN_TGZ
+  wget -q $COIN_LINK
   compile_error
   unzip $COIN_ZIP >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
@@ -144,17 +146,11 @@ function update_config() {
   sed -i 's/daemon=1/daemon=0/' $CONFIGFOLDER/$CONFIG_FILE
   cat << EOF >> $CONFIGFOLDER/$CONFIG_FILE
 logintimestamps=1
-maxconnections=256
+maxconnections=128
 #bind=$NODEIP
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-
-#Addnodes
-addnode=xbi.seeds.mn.zone
-addnode=xbi.mnseeds.com
-addnode=95.179.164.128
-addnode=144.202.57.32
 
 EOF
 }
@@ -235,7 +231,9 @@ apt-get install libzmq3-dev -y >/dev/null 2>&1
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
 build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev \
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget curl libdb4.8-dev bsdmainutils libdb4.8++-dev \
-libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip libzmq5 >/dev/null 2>&1
+libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip libzmq5 autotools-dev python3 libboost-dev \
+libevent-1.4-2 libboost-all-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
+libqrencode-dev git multitail vim unrar htop ntpdate >/dev/null 2>&1
 apt-get update >/dev/null 2>&1
 apt-get -y upgrade >/dev/null 2>&1
 if [ "$?" -gt "0" ];
