@@ -13,7 +13,7 @@ COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='XBI'
 COIN_PORT=7339
 OLD_PORT=7332
-RPC_PORT=6250
+RPC_PORT=6259
 
 NODEIP=$(curl -s4 icanhazip.com)
 
