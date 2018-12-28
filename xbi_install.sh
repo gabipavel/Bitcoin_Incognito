@@ -7,8 +7,8 @@ COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO="https://github.com/XBIncognito/xbi-4.3.2.1/releases/download/4.3.2.1/"
-COIN_ZIP="xbi-linux-daemon-4.3.2.1.zip"
-COIN_LINK="${COIN_REPO}${COIN_ZIP}"
+COIN_ZIPFILE="xbi-linux-daemon-4.3.2.1.zip"
+COIN_TGZ="${COIN_REPO}${COIN_ZIPFILE}"
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='XBI'
 COIN_PORT=7339
@@ -29,8 +29,8 @@ MAG='\e[1;35m'
 function purgeOldInstallation() {
     echo -e "${GREEN}Searching and removing old $COIN_NAME files and configurations${NC}"
     #kill wallet daemon
-    systemctl stop $COIN_NAME.service > /dev/null 2>&1
-    sudo killall $COIN_DAEMON > /dev/null 2>&1
+    systemctl stop $COIN_NAME.service
+    sudo killall $COIN_DAEMON
 	# Save Key 
 	OLDKEY=$(awk -F'=' '/masternodeprivkey/ {print $2}' $CONFIGFOLDER/$CONFIG_FILE 2> /dev/null)
 	if [ "$?" -eq "0" ]; then
@@ -38,27 +38,26 @@ function purgeOldInstallation() {
 		echo -e $OLDKEY
 	fi
     #remove old ufw port allow
-    sudo ufw delete allow $OLD_PORT/tcp > /dev/null 2>&1
+    sudo ufw delete allow $OLD_PORT/tcp
     #remove old files
-    rm rm -- "$0" > /dev/null 2>&1
-    rm -rf $CONFIGFOLDER > /dev/null 2>&1
+    rm -- "$0"
+    rm -rf $CONFIGFOLDER
     rm -rf /usr/local/bin/$COIN_CLI /usr/local/bin/$COIN_DAEMON> /dev/null 2>&1
-    rm -rf /usr/bin/$COIN_CLI /usr/bin/$COIN_DAEMON > /dev/null 2>&1
-    rm -rf /tmp/*
+    rm -rf /usr/bin/$COIN_CLI /usr/bin/$COIN_DAEMON
     echo -e "${GREEN}* Done${NONE}";
 }
 
 
 function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
-  cd $TMP_FOLDER >/dev/null 2>&1
-  wget -q $COIN_LINK
+  cd $TMP_FOLDER
+  wget -q $COIN_TGZ
   compile_error
-  unzip $COIN_ZIP >/dev/null 2>&1
+  unzip $COIN_ZIP
   chmod +x $COIN_DAEMON $COIN_CLI
   mv $COIN_DAEMON $COIN_CLI $COIN_PATH
-  cd ~ >/dev/null 2>&1
-  rm -rf $TMP_FOLDER >/dev/null 2>&1
+  cd ~
+  rm -rf $TMP_FOLDER
   clear
 }
 
@@ -92,7 +91,7 @@ EOF
   systemctl daemon-reload
   sleep 3
   systemctl start $COIN_NAME.service
-  systemctl enable $COIN_NAME.service >/dev/null 2>&1
+  systemctl enable $COIN_NAME.service
 
   if [[ -z "$(ps axo cmd:100 | egrep $COIN_DAEMON)" ]]; then
     echo -e "${RED}$COIN_NAME is not running${NC}, please investigate. You should start by running the following commands as root:"
@@ -105,7 +104,7 @@ EOF
 
 
 function create_config() {
-  mkdir $CONFIGFOLDER >/dev/null 2>&1
+  mkdir $CONFIGFOLDER
   RPCUSER=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n1)
   RPCPASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w22 | head -n1)
   cat << EOF > $CONFIGFOLDER/$CONFIG_FILE
@@ -159,10 +158,10 @@ EOF
 function enable_firewall() {
   echo -e "Installing and setting up firewall to allow ingress on port ${GREEN}$COIN_PORT${NC}"
   ufw allow $COIN_PORT/tcp comment "$COIN_NAME MN port" >/dev/null
-  ufw allow ssh comment "SSH" >/dev/null 2>&1
-  ufw limit ssh/tcp >/dev/null 2>&1
-  ufw default allow outgoing >/dev/null 2>&1
-  echo "y" | ufw enable >/dev/null 2>&1
+  ufw allow ssh comment "SSH"
+  ufw limit ssh/tcp
+  ufw default allow outgoing
+  echo "y" | ufw enable
 }
 
 
@@ -218,24 +217,24 @@ fi
 
 function prepare_system() {
 echo -e "Preparing the VPS to setup. ${CYAN}$COIN_NAME${NC} ${RED}Masternode${NC}"
-apt-get update >/dev/null 2>&1
-apt-get -y upgrade >/dev/null 2>&1
-DEBIAN_FRONTEND=noninteractive apt-get update > /dev/null 2>&1
-DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade >/dev/null 2>&1
-apt install -y software-properties-common >/dev/null 2>&1
+apt-get update
+apt-get -y upgrade
+DEBIAN_FRONTEND=noninteractive apt-get update
+DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y -qq upgrade
+apt install -y software-properties-common
 echo -e "${PURPLE}Adding bitcoin PPA repository"
-apt-add-repository -y ppa:bitcoin/bitcoin >/dev/null 2>&1
+apt-add-repository -y ppa:bitcoin/bitcoin
 echo -e "Installing required packages, it may take some time to finish.${NC}"
-apt-get update >/dev/null 2>&1
-apt-get install libzmq3-dev -y >/dev/null 2>&1
+apt-get update
+apt-get install libzmq3-dev -y
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
 build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev \
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget curl libdb4.8-dev bsdmainutils libdb4.8++-dev \
 libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip libzmq5 autotools-dev python3 libboost-dev \
 libevent-1.4-2 libboost-all-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
-libqrencode-dev git multitail vim unrar htop ntpdate >/dev/null 2>&1
-apt-get update >/dev/null 2>&1
-apt-get -y upgrade >/dev/null 2>&1
+libqrencode-dev git multitail vim unrar htop ntpdate
+apt-get update
+apt-get -y upgrade
 if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
@@ -309,4 +308,3 @@ prepare_system
 create_swap
 download_node
 setup_node
-
