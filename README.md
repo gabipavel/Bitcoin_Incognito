@@ -1,4 +1,4 @@
-![Example-Logo](https://cdn.discordapp.com/attachments/449047287197597716/466054888535883778/Wallet_Logo.png)
+![XBI-Logo](https://bitcoinincognito.org/wp-content/uploads/2018/09/XBI-INCOGNITO-LOGO.png)
 # Bitcoin Incognito (XBI) Masternode Setup Guide (Ubuntu 16.04)
 This guide will assist you in setting up a Bitcoin Incognito Masternode on a Linux Server running Ubuntu 16.04. (Use at your own risk)
 
