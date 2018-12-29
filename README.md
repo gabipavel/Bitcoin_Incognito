@@ -95,34 +95,34 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 ***
 
 
-***Step 6*** 
+***Step 5*** 
 * Paste the password into the "Password" box and press "OK"
 ***
 
-***Step 7***
+***Step 6***
 * Paste the code below into the Bitvise terminal then press enter (it will show you the download and go the a new line)
 
 `wget -N https://raw.githubusercontent.com/sub307/Bitcoin_Incognito/master/xbi_install.sh`
 ***
 
-***Step 8***
+***Step 7***
 * Paste the code below into the Bitvise terminal then press enter
 
 `bash xbi_install.sh`
 
 ***
 
-***Step 9***
+***Step 8***
 * Sit back and wait for the install (this will take 10-20 mins)
 ***
 
-***Step 10***
+***Step 9***
 * When prompted to enter your Gen key - press enter (or paste your local generated key and press enter)
 
 ![Example-installing](https://i.imgur.com/EpQHK3y.png)
 ***
 
-***Step 11***
+***Step 10***
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
 ![Example-installing](https://i.imgur.com/XzZs6Ym.png)
