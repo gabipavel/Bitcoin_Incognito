@@ -79,22 +79,16 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 ***
 
 ***Step 2***
-* Open the bitvise application and fill in the "Hostname" box with the IP of your VPS then click "Open"
-![Example-PuttyInstaller](https://i.imgur.com/vkN1alC.png)
+* Open the bitvise application and fill in the "Host" box with the IP of your VPS, the "Port" box with _22_ and the "Username" box with _root_ then click "Log in"
+![Example-PuttyInstaller](https://i.imgur.com/2eTjcRS.png)
 ***
 
 ***Step 3*** 
-* Once you have clicked open it will open a security alert (click yes).  
+* Once you have clicked log in it will open a security alert (click "Accept and Save").  
 ***
 
 
 ***Step 4***
-* Type "root" as the login/username then press enter 
-
-![Example-Root](https://i.imgur.com/11GMkvA.png)
-***
-
-***Step 5***
 * Copy the root password from the VULTR server page.
 ![Example-RootPass](https://i.imgur.com/JnXQXav.png)
 
@@ -102,12 +96,11 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 
 ***Step 6*** 
-* Paste the password into the Bitvise terminal by right clicking (it will not show the password so just press enter)
-![Example-RootPassEnter](https://i.imgur.com/34Qky1K.png)
+* Paste the password into the "Password" box and press "OK"
 ***
 
 ***Step 7***
-* Paste the code below into the Bitvise terminal then press enter (it will just go to a new line)
+* Paste the code below into the Bitvise terminal then press enter (it will show you the download and go the a new line)
 
 `wget -N https://raw.githubusercontent.com/sub307/Bitcoin_Incognito/master/xbi_install.sh`
 ***
@@ -116,8 +109,6 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 * Paste the code below into the Bitvise terminal then press enter
 
 `bash xbi_install.sh`
-
-![Example-Bash](https://i.imgur.com/myvmKTE.png)
 
 ***
 
@@ -128,13 +119,13 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 ***Step 10***
 * When prompted to enter your Gen key - press enter (or paste your local generated key and press enter)
 
-![Example-installing](https://i.imgur.com/sLvWd1S.png)
+![Example-installing](https://i.imgur.com/EpQHK3y.png)
 ***
 
 ***Step 11***
 * You will now see all of the relavant information for your server.
 * Keep this terminal open as we will need the info for the wallet setup.
-![Example-installing](https://i.imgur.com/c5jMOne.png)
+![Example-installing](https://i.imgur.com/XzZs6Ym.png)
 ***
 
 ## Section D: Preparing the Local wallet
