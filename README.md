@@ -11,11 +11,12 @@ If you require further assistance contact the support team [Discord](https://dis
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
 ***
 ## Contents
-* **Section A**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573).
-* **Section B**: Downloading and installing Bitvise.
-* **Section C**: Connecting to the VPS and installing the MN script via Bitvise.
-* **Section D**: Preparing the local wallet.
-* **Section E**: Connecting & Starting the masternode.
+* **[Section A](https://github.com/sub307/Bitcoin_Incognito/blob/master/README.md#section-a-creating-the-vps-within-vultr)**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573).
+* **[Section B](https://github.com/sub307/Bitcoin_Incognito#section-b-downloading-and-installing-bitvise)**: Downloading and installing Bitvise.
+* **[Section C](https://github.com/sub307/Bitcoin_Incognito#section-c-connecting-to-the-vps--installing-the-mn-script-via-bitvise)**: Connecting to the VPS and installing the MN script via Bitvise.
+* **[Section D](https://github.com/sub307/Bitcoin_Incognito#section-d-preparing-the-local-wallet)**: Preparing the local wallet.
+* **[Section E](https://github.com/sub307/Bitcoin_Incognito#section-e-connecting--starting-the-masternode)**: Connecting & Starting the masternode.
+* **[FAQ](https://github.com/sub307/Bitcoin_Incognito#faq)**: Frequently asked questions
 ***
 
 Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jIk).
@@ -37,7 +38,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 ***Step 4***
 * Choose a server type: Ubuntu 16.04
-![Example-OS](https://i.imgur.com/6mSPmVc.png)
+![Example-OS](https://i.imgur.com/8gh2GDX.png)
 ***
 
 ***Step 5***
