@@ -80,6 +80,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 ***Step 2***
 * Open the bitvise application and fill in the "Host" box with the IP of your VPS, the "Port" box with _22_ and the "Username" box with _root_ then click "Log in"
+
 ![Example-PuttyInstaller](https://i.imgur.com/2eTjcRS.png)
 ***
 
