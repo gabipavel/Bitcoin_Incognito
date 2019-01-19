@@ -11,7 +11,7 @@ If you require further assistance contact the support team [Discord](https://dis
 4) **An SSH client such as [Bitvise](https://dl.bitvise.com/BvSshClient-Inst.exe)**
 ***
 ## Contents
-* **[Section A](https://github.com/sub307/Bitcoin_Incognito/blob/master/README.md#section-a-creating-the-vps-within-vultr)**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573).
+* **[Section A](https://github.com/sub307/Bitcoin_Incognito/blob/master/README.md#section-a-creating-the-vps-within-vultr)**: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7781034-4F).
 * **[Section B](https://github.com/sub307/Bitcoin_Incognito#section-b-downloading-and-installing-bitvise)**: Downloading and installing Bitvise.
 * **[Section C](https://github.com/sub307/Bitcoin_Incognito#section-c-connecting-to-the-vps--installing-the-mn-script-via-bitvise)**: Connecting to the VPS and installing the MN script via Bitvise.
 * **[Section D](https://github.com/sub307/Bitcoin_Incognito#section-d-preparing-the-local-wallet)**: Preparing the local wallet.
@@ -22,9 +22,9 @@ If you require further assistance contact the support team [Discord](https://dis
 Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jIk).
 
 
-## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7598573) 
+## Section A: Creating the VPS within [Vultr](https://www.vultr.com/?ref=7781034-4F) 
 ***Step 1***
-* Register at [Vultr](https://www.vultr.com/?ref=7497353)
+* Register at [Vultr](https://www.vultr.com/?ref=7781034-4F)
 ***
 
 ***Step 2***
@@ -144,9 +144,9 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 ***
 
 ***step 4***
-* Go to the console within the wallet 
+* Go to the debug console within the wallet 
 
-![Example-console](https://i.imgur.com/WmafTkS.png)
+![Example-console](https://i.imgur.com/A7greWe.png)
 ***
 
 ***Step 5***
@@ -154,7 +154,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 `masternode outputs` 
 
-![Example-outputs](https://i.imgur.com/AhuNT19.png)
+![Example-outputs](https://i.imgur.com/50dn7k5.png)
 ***
 
 ***Step 6***
@@ -166,7 +166,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 
 ***Step 1***
 * Go to the tools tab within the wallet and click open "masternode configuration file" 
-![Example-create](https://i.imgur.com/HSUjU2F.png)
+![Example-create](https://i.imgur.com/A7greWe.png)
 ***
 
 ***Step 2***
@@ -177,7 +177,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 * The `Genkey` is your masternode Gen key (This is also in the Bitvise terminal that you have open).
 * The `TxHash` is the transaction ID/long key that you copied to the text file.
 * The `Output Index` is the 0 or 1 that you copied to your text file.
-![Example-create](https://i.imgur.com/9b1I3bk.png)
+![Example-create](https://i.imgur.com/By8wC9T.png)
 
 Click "File Save"
 ***
