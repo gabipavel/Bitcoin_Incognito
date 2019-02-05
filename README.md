@@ -136,7 +136,7 @@ Follow the next steps or follow the [video tutorial](https://youtu.be/UGGWZ4k9jI
 ***
 
 ***Step 2***
-* Send EXACTLY 3,000 XBI to a receive address within your wallet.
+* Send EXACTLY 3,000 XBI to a receive address within your wallet. (You can do this from your wallet to a new address in your wallet or from the exchange)
 ***
 
 ***Step 3***
