@@ -7,9 +7,7 @@ COIN_DAEMON='xbid'
 COIN_CLI='xbi-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO="https://github.com/XBIncognito/xbi-4.3.2.1/releases/download/4.3.2.1/"
-BOOTSTRAP_REPO="https://github.com/sub307/XBI-bootstrap/releases/download/417018/"
-BOOTSTRAP_FILE="bootstrap417018.rar"
-BOOTSTRAP="$BOOTSTRAP_REPO$BOOTSTRAP_FILE"
+BOOTSTRAP="https://github.com/sub307/XBI-bootstrap/releases/download/417018/bootstrap417018.rar"
 COIN_ZIPFILE="xbi-linux-daemon-4.3.2.1.zip"
 COIN_TGZ="${COIN_REPO}${COIN_ZIPFILE}"
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
@@ -66,10 +64,11 @@ function download_node() {
 
 function add_bootstrap(){
  echo -e "${GREEN}Downloading bootstrap"
- cd $TMP_FOLDER > /dev/null 2>&1
- unrar x $BOOTSTRAP_FILE >/dev/null 2>&1
  mkdir $CONFIGFOLDER > /dev/null 2>&1
- mv blocks chainstate peers.dat $CONFIGFOLDER/
+ cd $CONFIGFOLDER > /dev/null 2>&1
+ wget -q $BOOTSTRAP -O bootstrap.rar
+ unrar x bootstrap.rar >/dev/null 2>&1
+ rm bootstrap.rar > /dev/null 2>&1
  cd ~ > /dev/null 2>&1
 }
 
