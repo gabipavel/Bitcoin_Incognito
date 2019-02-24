@@ -68,7 +68,7 @@ function add_bootstrap(){
  echo -e "${GREEN}Downloading bootstrap"
  cd $TMP_FOLDER > /dev/null 2>&1
  wget -q $BOOTSTRAP
- unrar -xvf $BOOTSTRAP_FILE >/dev/null 2>&1
+ unrar -xv $BOOTSTRAP_FILE >/dev/null 2>&1
  mkdir $CONFIGFOLDER > /dev/null 2>&1
  mv blocks chainstate peers.dat $CONFIGFOLDER/
  cd ~ > /dev/null 2>&1
