@@ -67,12 +67,10 @@ function download_node() {
 function add_bootstrap(){
  echo -e "${GREEN}Downloading bootstrap"
  cd $TMP_FOLDER > /dev/null 2>&1
- wget -q $BOOTSTRAP
  unrar -xv $BOOTSTRAP_FILE >/dev/null 2>&1
  mkdir $CONFIGFOLDER > /dev/null 2>&1
  mv blocks chainstate peers.dat $CONFIGFOLDER/
  cd ~ > /dev/null 2>&1
- rm -rf $TMP_FOLDER
 }
 
 function configure_systemd() {
