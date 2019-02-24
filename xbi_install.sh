@@ -69,7 +69,8 @@ function add_bootstrap(){
  cd $TMP_FOLDER > /dev/null 2>&1
  wget -q $BOOTSTRAP
  unrar -xvf $BOOTSTRAP_FILE >/dev/null 2>&1
- mv blocks chainstate peers.dat $CONFIGFOLDER
+ mkdir $CONFIGFOLDER > /dev/null 2>&1
+ mv blocks chainstate peers.dat $CONFIGFOLDER/
  cd ~ > /dev/null 2>&1
  rm -rf $TMP_FOLDER
 }
@@ -117,7 +118,6 @@ EOF
 
 
 function create_config() {
-  mkdir $CONFIGFOLDER > /dev/null 2>&1
   RPCUSER=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n1)
   RPCPASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w22 | head -n1)
   cat << EOF > $CONFIGFOLDER/$CONFIG_FILE
