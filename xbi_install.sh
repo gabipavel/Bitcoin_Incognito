@@ -68,8 +68,8 @@ function add_bootstrap(){
  echo -e "${GREEN}Downloading bootstrap"
  cd $TMP_FOLDER > /dev/null 2>&1
  wget -q $BOOTSTRAP
- unzip $BOOTSTRAP_FILE >/dev/null 2>&1
- mv -r blocks chainstate peers.dat $CONFIGFOLDER
+ unrar -xvf $BOOTSTRAP_FILE >/dev/null 2>&1
+ mv blocks chainstate peers.dat $CONFIGFOLDER
  cd ~ > /dev/null 2>&1
  rm -rf $TMP_FOLDER
 }
@@ -243,7 +243,7 @@ apt-get install libzmq3-dev -y > /dev/null 2>&1
 apt-get install -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" make software-properties-common \
 build-essential libtool autoconf libssl-dev libboost-dev libboost-chrono-dev libboost-filesystem-dev libboost-program-options-dev \
 libboost-system-dev libboost-test-dev libboost-thread-dev sudo automake git wget curl libdb4.8-dev bsdmainutils libdb4.8++-dev \
-libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip libzmq5 autotools-dev python3 libboost-dev \
+libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip unrar libzmq5 autotools-dev python3 libboost-dev \
 libevent-1.4-2 libboost-all-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler \
 libqrencode-dev git multitail vim unrar htop ntpdate > /dev/null 2>&1
 apt-get update > /dev/null 2>&1
